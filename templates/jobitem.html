@@ -1,0 +1,30 @@
+<!-- Container for the entire job -->
+<div class="border-bottom row" 
+  style="margin-bottom: 16px; 
+  padding-bottom: 8px;">
+
+  <div class="col-11">
+    <!-- Job title -->
+    <h4 
+      style="color:rgb(120, 120, 120); margin-bottom: 4px;">                    {{job['title']}}
+    </h4>
+    
+    <!-- Job location -->
+    <div>
+      <b>Location:</b> {{job['location']}}
+    </div>
+    
+    <!-- Job salary -->
+    <!-- If this job has a salary -->
+    {% if 'salary' in job %}
+      <div>
+        <b>Salary: </b> {{job['salary']}}
+      </div>
+    {% endif %}
+  </div>
+
+  <!-- Button -->
+  <div class="col-1">
+    <button type="button" class="btn btn-outline-primary">Apply</button>
+  </div>
+</div>
